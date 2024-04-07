@@ -24,7 +24,10 @@ server.use(
 server.use('/api/user', userRouter)
 
 server.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.json({
+        success: true,
+        message: "Welcome to Expense Tracker"
+    });
 })
 
 server.listen(process.env.PORT, () => {
